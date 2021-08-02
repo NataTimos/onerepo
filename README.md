@@ -26,3 +26,4 @@ This will run the build of your website and launch a local server to see the sit
 * [Prismic](https://prismic.io/) - API-based content management system
 * [Gatsby](https://www.gatsbyjs.org/) - React based framework for building websites
 
+![gif image of index page](https://github.com/NataTimos/MURKIT/blob/main/images/Mutkit_index.gif)
