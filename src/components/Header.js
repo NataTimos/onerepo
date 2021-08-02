@@ -33,17 +33,26 @@ export const Header = ({ isHomepage }) => {
         <div className="logo">Blog template</div>
       </Link>
       <nav>
-        <ul>
+        <ul className="ul-page-link">
           {topNav.map((navItem, index) => {
             return (
-              <li key={`link-${index}`}>
+              <li className="page-link" key={`link-${index}`}>
                 <Link to={navItem.link.url}>
                   {RichText.asText(navItem.link_label.raw)}
                 </Link>
               </li>
             )
           })}
-        </ul>
+          </ul>
+          <ul className="categoru-filter">
+            <li className="categoru-filter-item">Nature</li>
+            <li className="categoru-filter-item">People</li>
+            <li className="categoru-filter-item">Trips</li>
+            <li className="categoru-filter-item">Animals</li>
+            <li className="categoru-filter-item">Fashion</li>
+            <li className="categoru-filter-item">Tech</li>
+            <li className="categoru-filter-item">...</li>
+          </ul>
       </nav>
     </header>
   )

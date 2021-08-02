@@ -1,15 +1,10 @@
 import React from 'react'
 import prismicLogo from '../images/logo-prismic.svg'
+import footerImg from '../images/footer.png'
 
 const Footer = () => (
   <footer>
-    <p>
-      Proudly published with <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">Prismic</a>
-      <br />
-      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
-        <img className="footer-logo" src={prismicLogo} alt="Prismic logo" />
-      </a>
-    </p>
+    <img className="footer-logo" src={footerImg}/>
   </footer>
 )
 

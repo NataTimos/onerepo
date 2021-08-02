@@ -1,13 +1,17 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+
 
 export const HomepageBanner = ({
   title,
   description,
-  linkUrl,
-  linkLabel,
   backgroundUrl,
-}) => (
+  userPhoto
+}) => { 
+  const u_image = getImage(userPhoto)
+  return (
   <section
     className="homepage-banner"
     style={{
@@ -15,11 +19,14 @@ export const HomepageBanner = ({
     }}
   >
     <div className="banner-content container">
-      <h2 className="banner-title">{title}</h2>
-      <p className="banner-description">{description}</p>
-      {/* <Link to={linkUrl} className="banner-button">
-        {linkLabel}
-      </Link> */}
+      <GatsbyImage
+      image = {u_image}
+      layout="fixed"
+      width={200}
+      height={200}
+      alt=""
+    />
+  <p className="banner-description">{description}</p>
     </div>
   </section>
-)
+)}

@@ -8,10 +8,12 @@
   background: #FFF7C7; /* Gecko Browsers */
 }
 
+
+
 /*
  * Globals
  */
-body {
+/* body {
   padding: 20px;
   color: #72767b;
   font-family: 'PT serif', sans-serif;
@@ -20,6 +22,7 @@ body {
   letter-spacing : 0.4;
   line-height: 28px;
 }
+
 a {
   color: #72767B;
   font-size: 14px;
@@ -73,4 +76,4 @@ em {
 }
 img {
   max-width: 100%;
-}
+} */

@@ -1,0 +1,67 @@
+{
+    "Main" : {
+      "article_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading3",
+          "label" : "article title"
+        }
+      },
+      "article_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "article image"
+        }
+      },
+      "article_thumbnail" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "article thumbnail"
+        }
+      },
+      "article_category" : {
+        "type" : "Link",
+        "config" : {
+          "select" : "document",
+          "customtypes" : [ "category" ],
+          "label" : "article category",
+          "placeholder" : "thumbnail"
+        }
+      },
+      "article_date" : {
+        "type" : "Date",
+        "config" : {
+          "label" : "article date",
+          "placeholder" : "article date"
+        }
+      },
+      "article_author" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "article author",
+          "placeholder" : "author"
+        }
+      },
+      "article_descr" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "article descr",
+          "placeholder" : "short descr"
+        }
+      },
+      "article_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph",
+          "label" : "article content",
+          "placeholder" : "content"
+        }
+      }
+    }
+  }

@@ -6,6 +6,7 @@ import  Layout  from '../components/Layout'
 import  Seo  from '../components/Seo'
 import { HomepageBanner } from '../components/HomepageBanner'
 import {SliceZone}  from '../components/SliceZone'
+import MainContent from '../components/MainContent'
 
 const HomeTemplate = ({ data }) => {
   if (!data) return null
@@ -17,16 +18,18 @@ const HomeTemplate = ({ data }) => {
       <HomepageBanner
         title={RichText.asText(doc.banner_title.raw)}
         description={RichText.asText(doc.banner_description.raw)}
-        linkUrl={doc.banner_link.url}
-        linkLabel={RichText.asText(doc.banner_link_label.raw)}
+        // linkUrl={doc.banner_link.url}
+        // linkLabel={RichText.asText(doc.banner_link_label.raw)}
         backgroundUrl={doc.banner_background.url}
+        userPhoto={doc.banner_user_photo}
       />
-      <SliceZone sliceZone={doc.body} />
+      <MainContent />
+      {/* <SliceZone sliceZone={doc.body} /> */}
     </Layout>
   )
 }
 
-export const query = graphql`
+export const IndexQuery = graphql`
 query MyQuery {
     prismicHomepage {
       data {
@@ -36,16 +39,12 @@ query MyQuery {
         banner_description {
           raw
         }
-        banner_link {
-          url
-          type
-          uid
-        }
-        banner_link_label {
-          raw
-        }
+        
         banner_background {
           url
+        }
+        banner_user_photo {
+          gatsbyImageData
         }
         body {
           ...on PrismicSliceType {

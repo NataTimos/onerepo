@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Prismic Tutorial',
+    title: 'Gatsby + Prismic',
     description: 'Learn how to integrate Prismic into your Gatsby project.',
   },
   plugins: [
@@ -17,6 +17,8 @@ module.exports = {
           homepage: require('./custom_types/homepage.json'),
           navigation: require('./custom_types/navigation.json'),
           page: require('./custom_types/page.json'),
+          category: require('./custom_types/category.json'),
+          article: require('./custom_types/article.json')
         },
       },
     },
@@ -40,5 +42,8 @@ module.exports = {
         fonts: [`Lato\:400,400,700,700i,900`, `Amiri\:400,400,700,700i`],
       },
     },
+    // 'gatsby-plugin-image',
+    // 'gatsby-plugin-sharp',
+    // 'gatsby-transformer-sharp'
   ],
 }
